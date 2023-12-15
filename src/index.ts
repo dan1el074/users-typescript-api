@@ -1,7 +1,8 @@
 export class Person {
   sayMyName() {
-    return "hello world";
+    return "hello world"
   }
 }
 
-console.log(new Person().sayMyName());
+const person = new Person()
+console.log(person.sayMyName())
