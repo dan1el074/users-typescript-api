@@ -1,8 +1,10 @@
+import { Tree } from "@/one/two/tree/tree"
+
 export class Person {
   sayMyName() {
     return "hello world"
   }
 }
 
-const person = new Person()
-console.log(person.sayMyName())
+const tree = new Tree()
+console.log(tree.sayTree())
