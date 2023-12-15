@@ -1,10 +1,15 @@
-import { Tree } from "@/one/two/tree/tree"
+import * as express from "express"
+import { Response, Request } from "express"
+import { config } from "dotenv"
 
-export class Person {
-  sayMyName() {
-    return "hello world"
-  }
-}
+config()
 
-const tree = new Tree()
-console.log(tree.sayTree())
+const app = express()
+
+const port = process.env.PORT || 8000
+
+app.listen(port, () => console.log(`Listening on port ${port}!`))
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello World!")
+})
